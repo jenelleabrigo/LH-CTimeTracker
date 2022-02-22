@@ -1,0 +1,47 @@
+# Database Schema
+tables:
+
+  # sample_table:
+  #   columns:
+  #     -
+  #       name: column_name # Column name, required
+  #       type: TEXT/INTEGER/DATETIME/BLOB # Column type, required
+  #       notnull: 0,1 # Not NULL, default 0
+  #       dflt_value: null # default value, default null
+  #       pk: 0,1 # Primary Key, default 0
+  #       ai: 0,1 # Autoincrement, default 0
+  #   indexes:
+  #     - 
+  #       name: index_name # Index name, required
+  #       unique: 0,1 # Unique Index, default 0
+  #       infos: # target column name array, required
+  #         - 
+  #           name: column_name # column_name, required
+
+  # cms_lab_image
+  cms_lab_image:
+    columns:
+      - 
+        name: lab_id
+        type: INTEGER
+      - 
+        name: image_id
+        type: INTEGER
+      - 
+        name: ordered
+        type: INTEGER
+      - 
+        name: valid
+        type: BOOLEAN
+      - 
+        name: created
+        type: DATETIME
+      - 
+        name: modified
+        type: DATETIME
+    indexes:
+      - 
+        name: LAB_IMAGE_ID
+        infos:
+          - 
+            name: lab_id

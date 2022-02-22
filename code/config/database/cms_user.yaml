@@ -1,0 +1,67 @@
+# Database Schema
+tables:
+
+  # sample_table:
+  #   columns:
+  #     -
+  #       name: column_name # Column name, required
+  #       type: TEXT/INTEGER/DATETIME/BLOB # Column type, required
+  #       notnull: 0,1 # Not NULL, default 0
+  #       dflt_value: null # default value, default null
+  #       pk: 0,1 # Primary Key, default 0
+  #       ai: 0,1 # Autoincrement, default 0
+  #   indexes:
+  #     - 
+  #       name: index_name # Index name, required
+  #       unique: 0,1 # Unique Index, default 0
+  #       infos: # target column name array, required
+  #         - 
+  #           name: column_name # column_name, required
+
+  # cms_user
+  cms_user:
+    columns:
+      - 
+        name: user_id
+        type: INTEGER
+        notnull: 1
+        dflt_value: null
+        pk: 1
+        ai: 1
+      - 
+        name: name
+        type: CHAR
+      - 
+        name: login
+        type: CHAR
+      - 
+        name: pass
+        type: CHAR
+      - 
+        name: sig
+        type: CHAR
+      - 
+        name: options
+        type: TEXT
+      - 
+        name: valid
+        type: BOOLEAN
+      - 
+        name: created
+        type: DATETIME
+      - 
+        name: modified
+        type: DATETIME
+    indexes:
+      - 
+        name: USER_ID
+        unique: 1
+        infos:
+          - 
+            name: user_id
+      - 
+        name: USER_LOGIN
+        unique: 1
+        infos:
+          - 
+            name: login
